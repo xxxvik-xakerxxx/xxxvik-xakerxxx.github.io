@@ -1,0 +1,21 @@
+# site config
+title: xxxvik-xakerxxx.github.io
+description: a physicists venture into the internet
+url: xxxvik-xakerxxx.github.io
+logo: /assets/img/icon.png
+
+# author info
+author: Viktor Lysko
+email: wolfisrainn@gmail.com/wolfis_rain@mail.ru
+
+# build config
+include: ["_pages"]
+markdown: kramdown
+sass:
+    style: compressed
+    sass_dir: _sass
+permalink: /posts/:title/
+gems:
+    - jekyll-feed
+    - jekyll-sitemap
+timezone: Greece/Thessaloniki

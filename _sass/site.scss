@@ -1,0 +1,201 @@
+$mine_shaft: #3f3f3f;
+$dove_gray: #6f6f6f;
+$gray: #8f8f8f;
+$edward: #9fafaf;
+$moon_mist:#dcdccc;
+$beauty_bush: #ecbcbc;
+$double_col_white: #f0dfaf;
+
+$fg: $moon_mist;
+$head: $edward;
+$light_bg: $mine_shaft;
+$link: $double_col_white;
+$link_hov: $beauty_bush;
+$med_gray: $gray;
+
+$mono: "Liberation Mono", "DejaVu Sans Mono", monospace !default;
+$sans: "Noto Sans Regular", "Liberation Sans", "DejaVu Sans Book", sans !default;
+$maxcols: 80ch;
+
+@mixin container {
+  max-width: $maxcols;
+  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-color: $light_bg;
+  color: $fg;
+  font-family: $mono;
+  padding: 5rem 0 0 0;
+  margin: 0;
+}
+
+pre {
+  font-family: $mono;
+  overflow: auto;
+  margin: 1rem 0;
+}
+
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  pre {
+    overflow: auto;
+    margin-top: 2rem;
+    display: inline-block;
+    text-align: left;
+    line-height: 1.5rem;
+
+  }
+}
+
+.flex-justify {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.e-content {
+  /* text-align: justify; */
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+  &:hover {
+    color: $link_hov;
+  }
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: $light_bg;
+  border-bottom: 1px solid $med_gray;
+}
+
+h1 {
+  @include container;
+  color: $head;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+h2 {
+  @include container;
+  color: $head;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+p {
+  @include container;
+  line-height: 1rem;
+}
+
+.muted {
+  color: $med_gray;
+}
+
+footer {
+  @extend .muted;
+  padding: 2rem;
+  text-align: center;
+}
+
+time {
+  @extend .muted;
+}
+
+section {
+  padding-left: 5rem;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 0.5rem;
+}
+
+ol, ul {
+  @include container;
+}
+
+li {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+
+kbd {
+  color: $link;
+}
+
+code {
+  color: $med_gray;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d3container {
+    @extend .text-center;
+}
+
+.highlight {
+  margin: 0;
+  padding: 1rem;
+  background-color: $fg;
+}
+
+.highlight pre {
+  @include container;
+}
+
+blockquote {
+  font-style: italic;
+  p {
+    box-sizing: border-box;
+    padding: 0 3rem;
+  }
+}
+
+hr {
+  border: none;
+  text-align: center;
+  &:after {
+    @extend .muted;
+    content: '##';
+  }
+}
+
+aside {
+  @extend .muted;
+  @include container;
+  &:before {
+    display: block;
+    content: '/*';
+  }
+  &:after {
+    display: block;
+    white-space: pre;
+    content: ' */';
+  }
+  &>* {
+    margin-left: 1rem;
+  }
+  a {
+    color: $med_gray;
+  }
+}
