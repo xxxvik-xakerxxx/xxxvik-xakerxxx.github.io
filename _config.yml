@@ -10,12 +10,12 @@ gems:
 timezone: America/New_York
 
 # Site-level data
-name: Ben Burwell
+name: Viktor Lysko
 keywords:
-  - ben burwell
+  - viktor lysko
   - software engineer
   - developer
   - cryptography
-  - lighting design
+  - C++/ C/Python
 description: "I make things."
 excerpt_separator: <!--more-->
