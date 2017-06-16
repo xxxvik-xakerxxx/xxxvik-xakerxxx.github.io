@@ -2,18 +2,35 @@
 layout: master
 ---
 <header>
-  <h2><a href="../">../</a></h2>
+  <a class="nav-up" href="../">../</a>
 </header>
 <main>
-{{ content }}
+  {{ content }}
 </main>
 <footer>
   <p>
-    <a href="/">root</a> ~
-    <a href="/posts/">posts</a> ~
-    <a href="/feed.xml">rss</a>
+    <span class="footer-link">
+      <a href="/">about</a>
+    </span>
+    <span class="footer-link">
+      <a href="/posts/">posts</a>
+    </span>
+    <span class="footer-link">
+      <a href="/projects/">projects</a>
+    </span>
+    <span class="footer-link">
+      <a href="https://github.com/benburwell">github</a>
+    </span>
   </p>
   <p>
-    &copy; {{ site.time | date: '%Y' }} <a href="//creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+    <span class="footer-link">
+      <a href="/license/">&copy; {{ site.time | date: '%Y' }}</a>
+    </span>
+    <span class="footer-link">
+      <a href="/privacy/">privacy</a>
+    </span>
+    <span class="footer-link">
+      <a href="/feed.xml">rss</a>
+    </span>
   </p>
 </footer>

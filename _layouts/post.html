@@ -1,22 +1,34 @@
 ---
 layout: blog
 ---
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-<script type="text/x-mathjax-config" src="/assets/js/mathjax.conf.js"></script>
 
-<article itemscope itemtype="https://schema.org/BlogPosting" class="h-entry hentry">
-  <h1 itemprop="headline" class="p-name entry-title">{{ page.title }}</h1>
-  <p><time datetime="{{ page.date | date: '%Y-%m-%d' }}"
-           itemprop="datePublished" class="dt-published published">{{ page.date | date: "%-d %B %Y" }}</time></p>
-  <div itemprop="articleBody" class="e-content">
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 itemprop="headline">{{ page.title }}</h1>
+  <p><time datetime="{{ post.date | date: '%Y-%m-%d' }}" itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time></p>
+
+  <div itemprop="articleBody">
     {{ content }}
   </div>
 </article>
 
 <footer>
   <p>
+    Share on:<br>
+    <!--
+    <a title="Share/Discuss on Hacker News" target="_blank" href="https://news.ycombinator.com/submitlink?u=http%3A%2F%2Fwww.benburwell.com{{ page.url | cgi_escape }}&amp;t={{ page.title }}"><i class="lg-icon icon-share-hacker-news"></i></a>
+    <a title="Share on Twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;url=http%3A%2F%2Fwww.benburwell.com{{ page.url | cgi_escape }}"><i class="lg-icon icon-share-twitter"></i></a>
+    <a title="Share on Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.benburwell.com{{ page.url | cgi_escape }}"><i class="lg-icon icon-share-facebook"></i></a>
+    <a title="Share on Google+" target="_blank" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.benburwell.com{{ page.url | cgi_escape }}&amp;t={{ page.title }}"><i class="lg-icon icon-share-gplus"></i></a>
+    -->
+    <a title="Share/Discuss on Hacker News" target="_blank" href="https://news.ycombinator.com/submitlink?u=http%3A%2F%2Fwww.benburwell.com{{ page.url | cgi_escape }}&amp;t={{ page.title }}">Hacker News</a><br>
+    <a title="Share on Twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;url=http%3A%2F%2Fwww.benburwell.com{{ page.url | cgi_escape }}">Twitter</a><br>
+    <a title="Share on Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.benburwell.com{{ page.url | cgi_escape }}">Facebook</a><br>
+    <a title="Share on Google+" target="_blank" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.benburwell.com{{ page.url | cgi_escape }}&amp;t={{ page.title }}">Google Plus</a>
+  </p>
+
+  <p>
     Read more:<br>
-    {% for related in site.related_posts limit: 3 %}
+    {% for related in site.related_posts | limit: 3 %}
     <a href="{{ related.url }}">{{ related.title }}</a><br>
     {% endfor %}
   </p>

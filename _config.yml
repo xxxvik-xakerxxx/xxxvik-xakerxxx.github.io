@@ -1,21 +1,21 @@
-# site config
-title: xxxvik-xakerxxx.github.io
-description: a physicists venture into the internet
-url: xxxvik-xakerxxx.github.io
-logo: /assets/img/icon.png
-
-# author info
-author: Viktor Lysko
-email: wolfisrainn@gmail.com/wolfis_rain@mail.ru
-
-# build config
-include: ["_pages"]
+# Config options
 markdown: kramdown
 sass:
-    style: compressed
-    sass_dir: _sass
+  style: :compressed
+  sass_dir: _sass
 permalink: /posts/:title/
 gems:
-    - jekyll-feed
-    - jekyll-sitemap
-timezone: Greece/Thessaloniki
+  - jekyll-redirect-from
+  - jekyll-feed
+timezone: America/New_York
+
+# Site-level data
+name: Ben Burwell
+keywords:
+  - ben burwell
+  - software engineer
+  - developer
+  - cryptography
+  - lighting design
+description: "I make things."
+excerpt_separator: <!--more-->
