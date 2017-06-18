@@ -17,3 +17,9 @@
   description: "Front-end works"
   tech: "CSS/HTML/LESS/SASS/JS"
   github: "xxxvik-xakerxxx/front-end"
+
+- name: "AwesomeWM dotfiles"
+  description: "This is my AwesomeWM dotfiles"
+  tech: "Lua"
+  github: "xxxvik-xakerxxx/awesomeWMtheme-adapt"
+
