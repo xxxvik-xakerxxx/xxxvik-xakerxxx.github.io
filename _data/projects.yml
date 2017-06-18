@@ -10,12 +10,6 @@
   github: "xxxvik-xakerxxx/cpp-c--ish"
   live: "-"
 
-- name: "AwesomeWM dotfiles"
-  description: "This is my AwesomeWM dotfiles"
-  tech: "Lua"
-  github: "xxxvik-xakerxxx/awesomeWMtheme-adapt"
-  live: "-"
-
   - name: "GyverMODs"
   description: "Progect Arduino"
   tech: "C++"
